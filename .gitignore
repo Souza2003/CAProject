@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+terraform/.terraform/
+terraform.tfstate*
+*.tfstate.backup
+crash.log
+
+# Local overrides / vars (if any)
+override.tf
+override.tf.json
+*.tfvars
+
+# Keys (never commit secrets)
+*.pem
+*.key
+id_ed25519
+id_ed25519.pub
