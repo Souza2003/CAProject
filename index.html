@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVerse - Innovation Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #fff, #a8edea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 40px 0;
+            margin: 40px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            animation: countUp 2s ease;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #4facfe;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.05;
+            z-index: -1;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tech-pattern"></div>
+    
+    <div class="container">
+        <header>
+            <h1>🚀 TechVerse</h1>
+            <p class="tagline">Empowering Innovation Through Technology</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Active Users</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Projects Deployed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">99.9%</span>
+                <span class="stat-label">Uptime</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Support</span>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <span class="icon">☁️</span>
+                <h3>Cloud Infrastructure</h3>
+                <p>Scalable and reliable cloud solutions powered by AWS, ensuring your applications run smoothly with 99.9% uptime guarantee.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="icon">🔒</span>
+                <h3>Advanced Security</h3>
+                <p>Enterprise-grade security with end-to-end encryption, multi-factor authentication, and continuous monitoring to protect your data.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="icon">⚡</span>
+                <h3>Lightning Fast</h3>
+                <p>Optimized performance with CDN integration and edge computing, delivering content at blazing speeds worldwide.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="icon">🤖</span>
+                <h3>AI-Powered Analytics</h3>
+                <p>Harness the power of machine learning for real-time insights, predictive analytics, and intelligent automation.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="icon">🔄</span>
+                <h3>CI/CD Pipeline</h3>
+                <p>Automated deployment workflows with GitHub Actions, Docker containers, and seamless integration with your favorite tools.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="icon">📱</span>
+                <h3>Responsive Design</h3>
+                <p>Pixel-perfect interfaces that adapt beautifully across all devices, from smartphones to large desktop displays.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="margin-bottom: 30px; font-size: 2.5em;">Ready to Transform Your Ideas?</h2>
+            <a href="#" class="cta-button">Get Started Now</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 TechVerse. Built with ❤️ on AWS EC2</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Deployed via CI/CD Pipeline | Powered by Docker & Nginx</p>
+        </footer>
+    </div>
+</body>
+</html>
